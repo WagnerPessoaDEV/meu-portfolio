@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Dinâmico | Dev Full Stack</title>
+    
+    <!-- Importando Fontes e Ícones do Google e FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Linkando o arquivo de CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Animado (Blobs) -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <header>
+        <nav>
+            <div class="logo">&lt;Dev<span>Portfolio</span>/&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-text reveal">
+                    <h2>Olá, eu sou um</h2>
+                    <h1>Desenvolvedor <span id="typewriter"></span><span class="typing-cursor"></span></h1>
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas. Transformo café em código e ideias em interfaces modernas.</p>
+                    <div class="btn-group">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Contato</a>
+                    </div>
+                </div>
+
+                <div class="hero-img-wrapper reveal">
+                    <img src="https://picsum.photos/seed/techavatar/500/500.jpg" alt="Avatar" class="hero-img">
+                    
+                    <!-- Cards de código flutuantes -->
+                    <div class="code-card c1">
+                        <span style="color:var(--secondary)">const</span> dev = {<br>
+                        &nbsp;&nbsp;stack: [<span style="color:#f1fa8c">'JS'</span>, <span style="color:#f1fa8c">'React'</span>],<br>
+                        &nbsp;&nbsp;status: <span style="color:#50fa7b">'learning'</span><br>
+                        };
+                    </div>
+                    <div class="code-card c2">
+                        <span style="color:#8be9fd">function</span> createFuture() {<br>
+                        &nbsp;&nbsp;<span style="color:var(--secondary)">return</span> <span style="color:#f1fa8c">"Success"</span>;<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="section-header reveal" data-text="SKILLS">
+                <h2>Tecnologias</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fab fa-react"></i>
+                    <h3>React.js</h3>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fab fa-node"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-header reveal" data-text="WORK">
+                <h2>Projetos Recentes</h2>
+            </div>
+            <div class="projects-grid">
+                
+                <!-- Projeto 1 -->
+                <div class="project-card reveal">
+                    <div class="card-inner">
+                        <div class="project-img-container">
+                            <img src="https://picsum.photos/seed/webdesign/600/400" alt="Projeto 1" class="project-img">
+                        </div>
+                        <h3>Landing Page Tech</h3>
+                        <p style="margin: 10px 0; color: var(--text-muted);">Website responsivo com animações CSS avançadas e design moderno.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-card reveal">
+                    <div class="card-inner">
+                        <div class="project-img-container">
+                            <img src="https://picsum.photos/seed/appdashboard/600/400" alt="Projeto 2" class="project-img">
+                        </div>
+                        <h3>Dashboard Admin</h3>
+                        <p style="margin: 10px 0; color: var(--text-muted);">Interface de controle com gráficos e modo escuro.</p>
+                        <div class="tech-tags">
+                            <span>React</span><span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="project-card reveal">
+                    <div class="card-inner">
+                        <div class="project-img-container">
+                            <img src="https://picsum.photos/seed/mobileapp/600/400" alt="Projeto 3" class="project-img">
+                        </div>
+                        <h3>App E-commerce</h3>
+                        <p style="margin: 10px 0; color: var(--text-muted);">Aplicativo de vendas com carrinho e integração de pagamentos.</p>
+                        <div class="tech-tags">
+                            <span>Flutter</span><span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h3>Vamos construir algo incrível?</h3>
+                    <p style="margin-bottom: 30px; color: var(--text-muted);">Estou disponível para oportunidades de estágio e projetos freelance.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@email.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/dev</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo, Brasil</span>
+                    </div>
+                </div>
+                
+                <form>
+                    <input type="text" placeholder="Seu Nome">
+                    <input type="email" placeholder="Seu Email">
+                    <textarea rows="5" placeholder="Sua Mensagem"></textarea>
+                    <button class="btn btn-primary">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 DevPortfolio. Feito com <i class="fas fa-heart" style="color: var(--secondary);"></i> e café.</p>
+    </footer>
+
+    <!-- Linkando o arquivo de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
