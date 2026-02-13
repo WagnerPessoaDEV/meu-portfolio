@@ -71,3 +71,52 @@ cards.forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
     });
 });
+
+const modal = document.getElementById('project-modal');
+const modalTitle = modal.querySelector('.modal-title');
+const modalDesc = modal.querySelector('.modal-desc');
+const modalImg = modal.querySelector('.modal-img');
+const modalTags = modal.querySelector('.modal-tags');
+const modalVisit = modal.querySelector('.modal-visit');
+const modalClose = modal.querySelector('.modal-close');
+const modalYear = modal.querySelector('.modal-year');
+const modalRole = modal.querySelector('.modal-role');
+
+function openModal(card) {
+    const title = card.querySelector('h3')?.textContent || '';
+    const desc = card.querySelector('p')?.textContent || '';
+    const img = card.querySelector('.project-img')?.src || '';
+    const tags = Array.from(card.querySelectorAll('.tech-tags span')).map(el => el.textContent);
+    const url = card.dataset.url || '#';
+    
+    // Novos campos
+    const year = card.dataset.year || '2023';
+    const role = card.dataset.role || 'Desenvolvedor';
+
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modalImg.src = img;
+    modalTags.innerHTML = tags.map(t => `<span>${t}</span>`).join('');
+    modalVisit.href = url;
+    
+    if (modalYear) modalYear.textContent = year;
+    if (modalRole) modalRole.textContent = role;
+
+    modal.classList.add('active');
+}
+
+function closeModal() {
+    modal.classList.remove('active');
+}
+
+cards.forEach(card => {
+    card.addEventListener('click', () => openModal(card));
+});
+
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});

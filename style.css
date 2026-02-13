@@ -144,11 +144,25 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
+#typewriter {
+    font-family: 'Fira Code', monospace;
+    color: var(--primary);
+    -webkit-text-fill-color: var(--primary);
+    -webkit-background-clip: initial;
+    background: none;
+    text-shadow: 0 0 8px rgba(0, 242, 234, 0.4);
+    white-space: nowrap;
+    display: inline-block;
+}
+
 .typing-cursor {
     display: inline-block;
     width: 3px;
+    height: 1em;
+    margin-left: 6px;
     background-color: var(--primary);
     animation: blink 0.7s infinite;
+    box-shadow: 0 0 8px var(--primary);
 }
 
 .hero-text p {
@@ -384,6 +398,105 @@ section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
     border-radius: 20px;
     margin-right: 5px;
     font-family: 'Fira Code', monospace;
+}
+
+/* --- MODAL DE PROJETOS --- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+.modal.active { display: flex; }
+.modal-content {
+    background: #111; /* Fundo sólido mais escuro */
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    padding: 0; /* Sem padding container */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.3s;
+}
+.modal-close:hover { background: var(--secondary); transform: rotate(90deg); }
+
+.modal-img-wrap {
+    width: 100%;
+    height: 300px;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.modal-body {
+    padding: 30px;
+}
+.modal-title { 
+    font-size: 2rem; 
+    margin-bottom: 10px;
+    color: #fff;
+}
+.modal-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    background: rgba(0, 242, 234, 0.05);
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+.modal-desc { 
+    color: #ccc; 
+    margin-bottom: 25px; 
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+.modal-visit {
+    width: 100%;
+    justify-content: center;
+    margin-top: 25px;
+    background: var(--primary);
+    color: #0b0d17;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.modal-visit:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 30px rgba(0, 242, 234, 0.4);
 }
 
 /* --- CONTATO --- */
