@@ -21,7 +21,7 @@ class CodeBackground {
         this.canvas.style.height = '100%';
         this.canvas.style.zIndex = '-1';
         this.canvas.style.pointerEvents = 'none';
-        this.canvas.style.opacity = '0.2'; // Opacidade ajustada para ser um pouco mais visível
+        this.canvas.style.opacity = '0.3'; // Opacidade ajustada para ser um pouco mais visível
         document.body.prepend(this.canvas);
 
         this.resize();
@@ -185,13 +185,13 @@ class CodeBackground {
     getCodeSnippet() {
         return `
 /* 
- * StartCria SYSTEM INITIALIZATION 
+ * @WagmePessoaDe SYSTEM INITIALIZATION 
  * Loading core modules...
  */
 
-import { Future } from '@StartCria/time';
-import { Innovation } from '@StartCria/core';
-import { Design } from '@StartCria/ui';
+import { Future } from '@WagnerPessoaDev/time';
+import { Innovation } from '@WagnerPessoaDev/core';
+import { Design } from '@WagnerPessoaDev/ui';
 
 class DigitalExperience extends Innovation {
     constructor() {
@@ -201,7 +201,7 @@ class DigitalExperience extends Innovation {
     }
 
     async initialize() {
-        console.log('Starting engines...');
+        console.log('Starting @WagnerPessoaDev engines...');
         
         // Carregando interface neural
         const ui = await Design.loadSystem({
@@ -273,7 +273,7 @@ class DigitalExperience extends Innovation {
     sendMessage(msg) {
         const mailer = new SecureMail();
         return mailer.send({
-            to: 'contact@startcria.com',
+            to: 'contact WagnerPessoa.me',
             body: msg,
             priority: 'HIGH'
         });
