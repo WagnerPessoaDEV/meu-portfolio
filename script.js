@@ -81,6 +81,7 @@ const modalVisit = modal.querySelector('.modal-visit');
 const modalClose = modal.querySelector('.modal-close');
 const modalYear = modal.querySelector('.modal-year');
 const modalRole = modal.querySelector('.modal-role');
+const modalCategory = modal.querySelector('.modal-category');
 const modalFeatures = modal.querySelector('.modal-features');
 
 function openModal(card) {
@@ -93,6 +94,7 @@ function openModal(card) {
     // Novos campos
     const year = card.dataset.year || '2023';
     const role = card.dataset.role || 'Desenvolvedor';
+    const category = card.dataset.category || '';
 
     modalTitle.textContent = title;
     if (/[;\n•]/.test(detailsRaw)) {
@@ -119,6 +121,11 @@ function openModal(card) {
     
     if (modalYear) modalYear.textContent = year;
     if (modalRole) modalRole.textContent = role;
+    if (modalCategory) {
+        modalCategory.textContent = category;
+        const categoryItem = modalCategory.parentElement;
+        if (categoryItem) categoryItem.style.display = category ? '' : 'none';
+    }
 
     modal.classList.add('active');
 }
@@ -138,3 +145,39 @@ modal.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
 });
+
+// --- 4. Modal para Cidade (Copacabana) ---
+const cityModal = document.getElementById('city-modal');
+const cityClose = cityModal ? cityModal.querySelector('.modal-close') : null;
+const cityVideos = cityModal ? cityModal.querySelectorAll('.city-video') : [];
+const locationBtn = document.querySelector('.contact-location');
+
+function openCityModal() {
+    if (!cityModal) return;
+    // Preenche vídeos a partir dos data-video* do botão
+    const v1 = locationBtn?.dataset.video1 || '';
+    const v2 = locationBtn?.dataset.video2 || '';
+    const v3 = locationBtn?.dataset.video3 || '';
+    const urls = [v1, v2, v3].filter(Boolean);
+    cityVideos.forEach((iframe, idx) => {
+        iframe.src = urls[idx] || urls[0] || '';
+    });
+    cityModal.classList.add('active');
+}
+
+function closeCityModal() {
+    if (!cityModal) return;
+    cityModal.classList.remove('active');
+    // Limpa src para parar reprodução
+    cityVideos.forEach(iframe => { iframe.src = ''; });
+}
+
+if (locationBtn) {
+    locationBtn.addEventListener('click', openCityModal);
+}
+if (cityClose) cityClose.addEventListener('click', closeCityModal);
+if (cityModal) {
+    cityModal.addEventListener('click', (e) => {
+        if (e.target === cityModal) closeCityModal();
+    });
+}

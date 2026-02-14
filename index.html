@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Dinâmico | Dev Full Stack</title>
+    <title>Wagner Pessoa | Dev Front-End</title>
     
     <!-- Importando Fontes e Ícones do Google e FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
         <section id="hero" class="hero">
             <div class="hero-content">
                 <div class="hero-text reveal">
-                    <h2>Olá, eu sou um</h2>
+                    <h2>Olá,me chamo</h2> <div class="logo">&lt;Wagner<span>Pessoa</span>/&gt;</div><br><h2>sou um </h2>
                     <h1>Desenvolvedor <span id="typewriter"></span><span class="typing-cursor"></span></h1>
                     <p>Estudante de Análise e Desenvolvimento de Sistemas. Transformo café em código e ideias em interfaces modernas.</p>
                     <div class="btn-group">
@@ -102,7 +102,7 @@
             <div class="projects-grid">
                 
                 <!-- Projeto 1 -->
-                <div class="project-card reveal" data-url="https://example.com/toda-bela" data-year="2023" data-role="Frontend & UI" data-details="• Layout 100% responsivo (desktop, tablet e mobile)
+                <div class="project-card reveal" data-url="https://example.com/toda-bela" data-year="2026" data-role="Frontend & UI" data-category="E-commerce" data-details="• Layout 100% responsivo (desktop, tablet e mobile)
 • Loja virtual integrada para venda de produtos, lingeries e itens de beleza
 • Galeria de trabalhos para apresentação de resultados reais
 • Seções institucionais (Nossa História, Serviços, Equipe)
@@ -120,24 +120,26 @@
                 </div>
 
                 <!-- Projeto 2 -->
-                <div class="project-card reveal" data-url="https://example.com/dashboard-admin" data-year="2022" data-role="Full Stack" data-details="• Autenticação com JWT
-• Gráficos em tempo real
-• Exportação de relatórios (CSV/PDF)
-• Dark mode e preferências do usuário">
+                <div class="project-card reveal" data-url="https://example.com/dashboard-admin" data-year="2026" data-role="Full Stack" data-details="O projeto foi desenvolvido com foco em:
+• Design moderno e profissional
+• Layout 100% responsivo (desktop, tablet e mobile)
+• Apresentação clara dos serviços de tecnologia digital
+• Integração com WhatsApp, Instagram e e-mail para atendimento rápido
+• Estrutura otimizada para melhorar a experiência do usuário e a conversão">
                     <div class="card-inner">
                         <div class="project-img-container">
                             <img src="https://picsum.photos/seed/appdashboard/600/400" alt="Projeto 2" class="project-img">
                         </div>
-                        <h3>Dashboard Admin</h3>
-                        <p style="margin: 10px 0; color: var(--text-muted);">Interface de controle com gráficos e modo escuro.</p>
+                        <h3>StarCria</h3>
+                        <p style="margin: 10px 0; color: var(--text-muted);">Desenvolvimento de website institucional para empresa de tecnologia, com atuação em design digital, sistemas e aplicativos.</p>
                         <div class="tech-tags">
-                            <span>React</span><span>Chart.js</span>
+                            <span>React</span><span>JS</span><span>HTML</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Projeto 3 -->
-                <div class="project-card reveal" data-url="https://example.com/app-ecommerce" data-year="2023" data-role="Mobile Dev" data-details="• Carrinho persistente
+                <div class="project-card reveal" data-url="https://example.com/app-ecommerce" data-year="2023" data-role="Mobile Dev" data-category="E-commerce" data-details="• Carrinho persistente
 • Checkout seguro integrado
 • Push notifications
 • Analytics de uso">
@@ -171,6 +173,9 @@
                         <div class="meta-item">
                             <i class="fas fa-user-tag"></i> <span class="modal-role"></span>
                         </div>
+                        <div class="meta-item">
+                            <i class="fas fa-shopping-cart"></i> <span class="modal-category"></span>
+                        </div>
                     </div>
 
                      <p class="modal-desc"></p>
@@ -182,6 +187,20 @@
             </div>
         </div>
 
+        <div id="city-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Fechar">×</button>
+                <div class="modal-body">
+                    <h3 class="modal-title">Rio de Janeiro — Brasil</h3>
+                    <div class="video-grid">
+                        <iframe class="city-video" src="" title="Copacabana Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="city-video" src="" title="Copacabana Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="city-video" src="" title="Copacabana Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Contact Section -->
         <section id="contact">
             <div class="contact-wrapper reveal">
@@ -189,18 +208,18 @@
                     <h3>Vamos construir algo incrível?</h3>
                     <p style="margin-bottom: 30px; color: var(--text-muted);">Estou disponível para oportunidades de estágio e projetos freelance.</p>
                     
-                    <div class="contact-item">
+                    <a class="contact-item" href="mailto:contato@wagnerpessoa.me">
                         <i class="fas fa-envelope"></i>
-                        <span>contato@email.com</span>
-                    </div>
-                    <div class="contact-item">
+                        <span>contato@wagnerpessoa.me</span>
+                    </a>
+                    <a class="contact-item" href="https://www.linkedin.com/in/WagnerPessoaDev" target="_blank" rel="noopener">
                         <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/dev</span>
-                    </div>
-                    <div class="contact-item">
+                        <span>linkedin.com/in/WagnerPessoaDev</span>
+                    </a>
+                    <button type="button" class="contact-item contact-location" data-city="Rio de Janeiro" data-video1="https://www.youtube.com/watch?v=8nLRIZhq_0Y" data-video2="https://www.youtube.com/watch?v=yg3AUjbzQ-Q" data-video3="https://www.youtube.com/watch?v=BQGmkdwlilw">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>São Paulo, Brasil</span>
-                    </div>
+                        <span>Rio de Janeiro, Brasil</span>
+                    </button>
                 </div>
                 
                 <form>
@@ -214,10 +233,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 DevPortfolio. Feito com <i class="fas fa-heart" style="color: var(--secondary);"></i> e café.</p>
+        <p>&copy; 2026 DevPortfolio.</p>
     </footer>
 
     <!-- Linkando o arquivo de JavaScript -->
     <script src="script.js"></script>
+    <script src="smooth-scroll.js"></script>
+    <script src="background-animation.js"></script>
 </body>
 </html>
